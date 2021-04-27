@@ -1,0 +1,49 @@
+#include<stdio.h>
+int n,ss[4],i,j,smallest,temp,pos;
+void selection_sort()
+{
+	for(i=0;i<=n-2;i++)
+	{
+	
+	int smallest=ss[i];
+	pos=i;
+	for(j=i+1;j<=n-1;j++)
+	{
+		if(ss[j]<smallest)
+		{
+			smallest=ss[j];
+			pos=j;
+		}
+		
+	}
+	temp=ss[i];
+	ss[i]=ss[pos];
+	ss[pos]=temp;
+	
+}
+}
+
+void display()
+{
+	printf("Sorted list is\n");
+	for(i=0;i<n;i++)
+	{
+	 printf("%d\n",ss[i]);
+	}
+
+}
+void main()
+{
+
+	printf("Enter the size of the list\n");
+	scanf("%d",&n);
+	printf("ente rthe elements in the list\n");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&ss[i]);
+	}
+	selection_sort();
+	display();
+	
+
+}
