@@ -72,8 +72,7 @@ void main()
 	printf("select the choice\n");
 	scanf("%d",&ch);
 
-//	while(1)
-//	{
+
 	
 			
 			switch(ch)
@@ -111,10 +110,7 @@ void main()
 			start=clock();
 		
      int index = binarySearch(a, low, high, value);
-		//	for(j=0;j<50000;j++)
-		//	{
-			//	temp=38/600;
-		//	}
+		
 			end=clock();
 			if (index != -1) {
       printf("the time taken to find key element %d number is %f secs\n",value,(((double)(end-start))/CLOCKS_PER_SEC));
