@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+int am[30][30],visited[30],n;
+void dfs(int src)
+{
+	int i;
+visited[src]=1;
+printf("%d",src);
+for(i=1;i<=n;i++)
+{
+	if(am[src][i]==1&&visited[i]==0)
+	{
+		dfs(i);
+	}
+}
+}
+
+
+void main()
+{
+	int i,j,src;
+	printf("Enter the number of verticies in a digraph\n");
+	scanf("%d",&n);
+	printf("Enter the matrix\n");
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=n;j++)
+		{
+		scanf("%d",&am[i][j]);	
+		}
+	}
+	for(i=1;i<=n;i++)
+	{
+		visited[i]=0;
+		for(j=1;j<=n;j++)
+		am[i][j]=0;
+	}
+	printf("Enter the starting vertex\n");
+	scanf("%d",&src);
+	printf("Nodes  reacheble from %d vertex  is \n",src);
+	dfs(src);
+	
+	
+}
