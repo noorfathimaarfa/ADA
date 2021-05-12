@@ -50,8 +50,4 @@ gets(Pattern);
 	
 		printf("Pattern String is there in Text string from location %d\n",i+1);
 	
-		
-	
-	
-}
 }
