@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include<time.h>
+#include<stdlib.h>
+int i,y,j;
+void insertion_sort(int a[],int n)
+{
+	for(i=1;i<n;i++)
+	{
+		y=a[i];
+		j=i-1;
+		while(j>=0&&a[j]>y)
+		{
+			a[j+1]=a[j];
+			j=j-1;
+		}
+	
+	a[j+1]=y;
+	}
+	
+	
+	
+	
+}
+
+
+int main()
+{
+ int n,a[15000],sort,i,j,temp;
+ clock_t start,end;
+
+	
+       while(1)
+       {
+		   n=500;
+		   while(n<=14500)
+		   {
+			   for(i=0;i<n;i++)
+			   {
+				   a[i]=n-1;
+			   }
+				   start=clock();
+				  insertion_sort(a,n);
+				   for(j=0;j<500000;j++)
+				   {temp=38/600;}
+				   end=clock();
+				   printf("\n time taken to sort %d numbers is %fsecs",n,(((double)(end-start))/(CLOCKS_PER_SEC)));
+				   n=n+1000;
+    
+    }
+    exit(0);
+}
+}
